@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:recipe_extractor/src/models/recipe_data.dart';
 import 'package:html/parser.dart';
 import 'package:recipe_extractor/src/scrapers/allrecipes.dart';
+import 'package:recipe_extractor/src/scrapers/bbcgoodfood.dart';
 import 'package:recipe_extractor/src/scrapers/marmiton.dart';
 import 'package:recipe_extractor/src/scrapers/swissmilk.dart';
 
@@ -39,6 +40,11 @@ Future<RecipeData> extractRecipe(String address) async {
           name: await Swissmilk.recipeName(document),
           ingredients: await Swissmilk.ingredients(document),
           instructions: await Swissmilk.instructions(document));
+    case "www.bbcgoodfood.com":
+      return RecipeData(
+          name: await Bbcgoodfood.recipeName(document),
+          ingredients: await Bbcgoodfood.ingredients(document),
+          instructions: await Bbcgoodfood.instructions(document));
     default:
       return RecipeData();
   }

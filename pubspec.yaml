@@ -1,6 +1,6 @@
 name: recipe_extractor
 description: Retrieve recipe name, ingredients and instructions from a recipe URL.
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/judemont/recipe_extractor
 
 environment:

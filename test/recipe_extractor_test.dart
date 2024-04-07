@@ -2,8 +2,7 @@ import 'package:recipe_extractor/recipe_extractor.dart';
 import 'package:test/test.dart';
 
 void main() {
-  extractRecipe(
-          "https://www.swissmilk.ch/fr/recettes-idees/recettes/LM201412_47/fondant-au-chocolat-sans-gluten/?collection=97860&index=0")
+  extractRecipe("https://www.bbcgoodfood.com/recipes/easy-chocolate-cake")
       .then((value) {
     print(value.toMap());
   });

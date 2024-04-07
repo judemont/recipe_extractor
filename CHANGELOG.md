@@ -4,3 +4,5 @@
 - Added support for `allrecipes.com`
 ### 1.0.2
 - Added support for `swissmilk.ch`
+### 1.0.3
+- Added support for `bbcgoodfood.com`

@@ -44,6 +44,7 @@ Supported recipe sites :
 - marmiton.org
 - allrecipes.com
 - swissmilk.ch
+- bbcgoodfood.com
 
 
 More coming soon...
