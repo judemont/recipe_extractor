@@ -2,8 +2,7 @@ import 'package:recipe_extractor/recipe_extractor.dart';
 import 'package:test/test.dart';
 
 void main() {
-  extractRecipe(
-          "https://www.simplyrecipes.com/cheese-stuffed-manicotti-recipe-7375880")
+  extractRecipe("https://www.bbcgoodfood.com/recipes/easy-chocolate-cake")
       .then((value) {
     print(value.toMap());
   });
