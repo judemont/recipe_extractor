@@ -10,5 +10,5 @@ List<Scarper> scarpers = [
   Bbcgoodfood(),
   Marmiton(),
   Simplyrecipes(),
-  Swissmilk()
+  Swissmilk(),
 ];

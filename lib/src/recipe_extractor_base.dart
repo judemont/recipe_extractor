@@ -12,7 +12,10 @@ Future<RecipeData> extractRecipe(String address) async {
   String domain = url.host;
   http.Response response;
   try {
-    response = await http.Client().get(url);
+    response = await http.Client().get(url, headers: {
+      "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+    });
   } catch (e) {
     throw Exception("Failed to access recipe site");
   }
@@ -22,6 +25,7 @@ Future<RecipeData> extractRecipe(String address) async {
   for (var scarper in scarpers) {
     if (scarper.host == domain) {
       scarper.pageDocument = document;
+      print("AABBAA");
       return RecipeData(
           name: scarper.recipeName(),
           ingredients: scarper.ingredients(),
