@@ -4,6 +4,7 @@ import 'package:recipe_extractor/src/models/recipe_data.dart';
 import 'package:html/parser.dart';
 import 'package:recipe_extractor/src/scrapers/allrecipes.dart';
 import 'package:recipe_extractor/src/scrapers/marmiton.dart';
+import 'package:recipe_extractor/src/scrapers/swissmilk.dart';
 
 Future<RecipeData> extractRecipe(String address) async {
   Uri? url = Uri.tryParse(address);
@@ -33,6 +34,11 @@ Future<RecipeData> extractRecipe(String address) async {
           name: await Allrecipes.recipeName(document),
           ingredients: await Allrecipes.ingredients(document),
           instructions: await Allrecipes.instructions(document));
+    case "www.swissmilk.ch":
+      return RecipeData(
+          name: await Swissmilk.recipeName(document),
+          ingredients: await Swissmilk.ingredients(document),
+          instructions: await Swissmilk.instructions(document));
     default:
       return RecipeData();
   }

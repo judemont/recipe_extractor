@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   extractRecipe(
-          "https://www.allrecipes.com/recipe/218792/ggs-chocolate-sheet-cake/")
+          "https://www.swissmilk.ch/fr/recettes-idees/recettes/LM201412_47/fondant-au-chocolat-sans-gluten/?collection=97860&index=0")
       .then((value) {
     print(value.toMap());
   });

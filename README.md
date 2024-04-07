@@ -43,5 +43,7 @@ print(recipeData.instructions);
 Supported recipe sites :
 - marmiton.org
 - allrecipes.com
+- swissmilk.ch
+
 
 More coming soon...
