@@ -45,6 +45,6 @@ Supported recipe sites :
 - allrecipes.com
 - swissmilk.ch
 - bbcgoodfood.com
-
+- simplyrecipes.com
 
 More coming soon...

@@ -1,17 +1,22 @@
 import 'package:html/dom.dart';
+import 'package:recipe_extractor/src/models/scarper.dart';
 
-class Bbcgoodfood {
-  static Future<String?> recipeName(Document document) async {
-    List<Node> titlesList = document.getElementsByTagName("h1");
+class Bbcgoodfood implements Scarper {
+  Document? document;
+
+  @override
+  String? recipeName() {
+    List<Node> titlesList = document!.getElementsByTagName("h1");
     if (titlesList.isNotEmpty) {
       return titlesList[0].text;
     }
     return null;
   }
 
-  static Future<List<String>?> ingredients(Document document) async {
+  @override
+  List<String>? ingredients() {
     List<Element> ingredientsElList =
-        document.querySelectorAll(".recipe__ingredients li");
+        document!.querySelectorAll(".recipe__ingredients li");
 
     List<String> ingredients = [];
 
@@ -22,9 +27,10 @@ class Bbcgoodfood {
     return ingredients;
   }
 
-  static Future<List<String>?> instructions(Document document) async {
+  @override
+  List<String>? instructions() {
     List<Node> instructionsElList =
-        document.querySelectorAll(".recipe__method-steps li");
+        document!.querySelectorAll(".recipe__method-steps li");
     List<String> instructions = [];
 
     for (var instructionEl in instructionsElList) {
@@ -32,5 +38,13 @@ class Bbcgoodfood {
     }
 
     return instructions;
+  }
+
+  @override
+  String get host => "www.bbcgoodfood.com";
+
+  @override
+  set pageDocument(Document document) {
+    this.document = document;
   }
 }

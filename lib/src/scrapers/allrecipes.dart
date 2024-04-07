@@ -1,17 +1,22 @@
 import 'package:html/dom.dart';
+import 'package:recipe_extractor/src/models/scarper.dart';
 
-class Allrecipes {
-  static Future<String?> recipeName(Document document) async {
-    List<Node> titlesList = document.getElementsByTagName("h1");
+class Allrecipes implements Scarper {
+  Document? document;
+
+  @override
+  String? recipeName() {
+    List<Node> titlesList = document!.getElementsByTagName("h1");
     if (titlesList.isNotEmpty) {
       return titlesList[0].text;
     }
     return null;
   }
 
-  static Future<List<String>?> ingredients(Document document) async {
+  @override
+  List<String>? ingredients() {
     List<Element> ingredientsElList =
-        document.querySelectorAll(".mntl-structured-ingredients__list-item p");
+        document!.querySelectorAll(".mntl-structured-ingredients__list-item p");
     List<String> ingredients = [];
 
     for (var ingredientEl in ingredientsElList) {
@@ -21,9 +26,10 @@ class Allrecipes {
     return ingredients;
   }
 
-  static Future<List<String>?> instructions(Document document) async {
+  @override
+  List<String>? instructions() {
     List<Node> instructionsElList =
-        document.querySelectorAll("#recipe__steps-content_1-0 p");
+        document!.querySelectorAll("#recipe__steps-content_1-0 p");
     List<String> instructions = [];
 
     for (var instructionEl in instructionsElList) {
@@ -31,5 +37,13 @@ class Allrecipes {
     }
 
     return instructions;
+  }
+
+  @override
+  String get host => "www.allrecipes.com";
+
+  @override
+  set pageDocument(Document document) {
+    this.document = document;
   }
 }

@@ -1,17 +1,22 @@
 import 'package:html/dom.dart';
+import 'package:recipe_extractor/src/models/scarper.dart';
 
-class Marmiton {
-  static Future<String?> recipeName(Document document) async {
-    List<Node> titlesList = document.getElementsByTagName("h1");
+class Marmiton implements Scarper {
+  Document? document;
+
+  @override
+  String? recipeName() {
+    List<Node> titlesList = document!.getElementsByTagName("h1");
     if (titlesList.isNotEmpty) {
       return titlesList[0].text;
     }
     return null;
   }
 
-  static Future<List<String>?> ingredients(Document document) async {
+  @override
+  List<String>? ingredients() {
     List<Node> ingredientsElList =
-        document.getElementsByClassName("card-ingredient-title");
+        document!.getElementsByClassName("card-ingredient-title");
     List<String> ingredients = [];
 
     for (var ingredientEl in ingredientsElList) {
@@ -22,9 +27,10 @@ class Marmiton {
     return ingredients;
   }
 
-  static Future<List<String>?> instructions(Document document) async {
+  @override
+  List<String>? instructions() {
     List<Node> instructionsElList =
-        document.querySelectorAll(".recipe-step-list__container p");
+        document!.querySelectorAll(".recipe-step-list__container p");
     List<String> instructions = [];
 
     for (var instructionEl in instructionsElList) {
@@ -32,5 +38,13 @@ class Marmiton {
     }
 
     return instructions;
+  }
+
+  @override
+  String get host => "www.marmiton.org";
+
+  @override
+  set pageDocument(Document document) {
+    this.document = document;
   }
 }

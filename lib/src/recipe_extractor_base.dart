@@ -1,11 +1,8 @@
 import 'package:html/dom.dart';
 import 'package:http/http.dart' as http;
+import 'package:recipe_extractor/scarpers.dart';
 import 'package:recipe_extractor/src/models/recipe_data.dart';
 import 'package:html/parser.dart';
-import 'package:recipe_extractor/src/scrapers/allrecipes.dart';
-import 'package:recipe_extractor/src/scrapers/bbcgoodfood.dart';
-import 'package:recipe_extractor/src/scrapers/marmiton.dart';
-import 'package:recipe_extractor/src/scrapers/swissmilk.dart';
 
 Future<RecipeData> extractRecipe(String address) async {
   Uri? url = Uri.tryParse(address);
@@ -22,30 +19,16 @@ Future<RecipeData> extractRecipe(String address) async {
 
   Document document = parse(response.body);
 
-  // print(domain);
-
-  switch (domain) {
-    case "www.marmiton.org":
+  for (var scarper in scarpers) {
+    if (scarper.host == domain) {
+      scarper.pageDocument = document;
       return RecipeData(
-          name: await Marmiton.recipeName(document),
-          ingredients: await Marmiton.ingredients(document),
-          instructions: await Marmiton.instructions(document));
-    case "www.allrecipes.com":
-      return RecipeData(
-          name: await Allrecipes.recipeName(document),
-          ingredients: await Allrecipes.ingredients(document),
-          instructions: await Allrecipes.instructions(document));
-    case "www.swissmilk.ch":
-      return RecipeData(
-          name: await Swissmilk.recipeName(document),
-          ingredients: await Swissmilk.ingredients(document),
-          instructions: await Swissmilk.instructions(document));
-    case "www.bbcgoodfood.com":
-      return RecipeData(
-          name: await Bbcgoodfood.recipeName(document),
-          ingredients: await Bbcgoodfood.ingredients(document),
-          instructions: await Bbcgoodfood.instructions(document));
-    default:
-      return RecipeData();
+          name: scarper.recipeName(),
+          ingredients: scarper.ingredients(),
+          instructions: scarper.instructions());
+    }
   }
+
+  return RecipeData();
+  // print(domain);
 }
