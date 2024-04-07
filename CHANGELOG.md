@@ -7,4 +7,6 @@
 ## 1.0.3
 - Added support for `bbcgoodfood.com`
 ## 2.0.0
-- 
+- Improved structure
+## 2.0.1
+- Fixed bbcgoodfood.com
