@@ -30,7 +30,7 @@ import package:recipe_extractor/recipe_extractor.dart
 ## Usage
 
 ```dart
-const String recipeUrl = "https://www.marmiton.org/recettes/recette_cookies-maison_86989.aspx";
+const String recipeUrl = "https://www.allrecipes.com/recipe/218792/ggs-chocolate-sheet-cake";
 
 RecipeData recipeData = await extractRecipe(recipeUrl);
 
@@ -42,5 +42,6 @@ print(recipeData.instructions);
 ## Additional information
 Supported recipe sites :
 - marmiton.org
+- allrecipes.com
 
 More coming soon...
