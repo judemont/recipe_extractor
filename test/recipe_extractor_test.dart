@@ -1,4 +1,4 @@
-import 'package:recipe_extractor/recipe_extractor.dart';
+// import 'package:recipe_extractor/recipe_extractor.dart';
 import 'package:test/test.dart';
 
 void main() {

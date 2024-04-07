@@ -13,9 +13,6 @@ and the Flutter guide for
 
 Retrieve recipe name, ingredients and instructions from a recipe URL.
 
-<!-- ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos. -->
 
 ## Getting started
 With dart : 

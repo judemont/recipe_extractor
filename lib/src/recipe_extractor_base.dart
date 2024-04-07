@@ -1,6 +1,6 @@
 import 'package:html/dom.dart';
 import 'package:http/http.dart' as http;
-import 'package:recipe_extractor/src/models/recipeData.dart';
+import 'package:recipe_extractor/src/models/recipe_data.dart';
 import 'package:html/parser.dart';
 import 'package:recipe_extractor/src/scrapers/marmiton.dart';
 
