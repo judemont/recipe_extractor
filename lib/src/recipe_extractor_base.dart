@@ -37,11 +37,3 @@ Future<RecipeData> extractRecipe(String address) async {
       return RecipeData();
   }
 }
-
-void main() {
-  extractRecipe(
-          "https://www.allrecipes.com/recipe/218792/ggs-chocolate-sheet-cake/")
-      .then((value) {
-    print(value.toMap());
-  });
-}
