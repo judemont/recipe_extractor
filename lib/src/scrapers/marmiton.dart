@@ -47,4 +47,12 @@ class Marmiton implements Scarper {
   set pageDocument(Document document) {
     this.document = document;
   }
+
+  @override
+  String? servings() {
+    return document!
+        .getElementsByClassName("recipe-ingredients__qt-counter_unit")
+        .first
+        .text;
+  }
 }

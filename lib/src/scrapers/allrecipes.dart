@@ -46,4 +46,12 @@ class Allrecipes implements Scarper {
   set pageDocument(Document document) {
     this.document = document;
   }
+
+  @override
+  String? servings() {
+    return document!
+        .getElementsByClassName("mntl-recipe-details__value")
+        .last
+        .text;
+  }
 }

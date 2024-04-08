@@ -28,6 +28,7 @@ Future<RecipeData> extractRecipe(String address) async {
       print("AABBAA");
       return RecipeData(
           name: scarper.recipeName(),
+          servings: scarper.servings(),
           ingredients: scarper.ingredients(),
           instructions: scarper.instructions());
     }

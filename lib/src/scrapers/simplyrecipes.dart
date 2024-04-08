@@ -47,4 +47,14 @@ class Simplyrecipes implements Scarper {
   set pageDocument(Document document) {
     this.document = document;
   }
+
+  @override
+  String? servings() {
+    return document!
+        .getElementsByClassName("recipe-serving project-meta__recipe-serving")
+        .first
+        .children
+        .last
+        .text;
+  }
 }

@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   extractRecipe(
-          "https://ww2.bettybossi.ch/fr/Rezept/ShowRezept/BB_APXX030601_0075A-40-fr")
+          "https://www.allrecipes.com/recipe/81108/classic-macaroni-salad/")
       .then((value) {
     print(value.toMap());
   });

@@ -47,4 +47,14 @@ class Swissmilk implements Scarper {
   set pageDocument(Document document) {
     this.document = document;
   }
+
+  @override
+  String? servings() {
+    Element? container = document!.getElementById("IngredientsCalculatorText");
+    if (container == null) {
+      return null;
+    } else {
+      return container.text;
+    }
+  }
 }

@@ -47,4 +47,9 @@ class Bbcgoodfood implements Scarper {
   set pageDocument(Document document) {
     this.document = document;
   }
+
+  @override
+  String? servings() {
+    return document!.getElementsByClassName("icon-with-text__children")[2].text;
+  }
 }
