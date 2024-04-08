@@ -50,6 +50,11 @@ class Bbcgoodfood implements Scarper {
 
   @override
   String? servings() {
-    return document!.getElementsByClassName("icon-with-text__children")[2].text;
+    List<Element> container =
+        document!.getElementsByClassName("icon-with-text__children");
+
+    if (container.length >= 3) {
+      return container[2].text;
+    }
   }
 }

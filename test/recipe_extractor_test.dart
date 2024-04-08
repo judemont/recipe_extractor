@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   extractRecipe(
-          "https://www.allrecipes.com/recipe/81108/classic-macaroni-salad/")
+          "https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM200910_59/tomatenrisotto/?collection=97335&index=0")
       .then((value) {
     print(value.toMap());
   });

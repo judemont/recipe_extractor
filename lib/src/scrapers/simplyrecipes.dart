@@ -50,11 +50,12 @@ class Simplyrecipes implements Scarper {
 
   @override
   String? servings() {
-    return document!
-        .getElementsByClassName("recipe-serving project-meta__recipe-serving")
-        .first
-        .children
-        .last
-        .text;
+    Element? container =
+        document!.querySelector(".project-meta__recipe-serving");
+    if (container != null) {
+      if (container.children.isNotEmpty) {
+        return container.children.last.text;
+      }
+    }
   }
 }

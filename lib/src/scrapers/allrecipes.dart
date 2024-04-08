@@ -49,9 +49,10 @@ class Allrecipes implements Scarper {
 
   @override
   String? servings() {
-    return document!
-        .getElementsByClassName("mntl-recipe-details__value")
-        .last
-        .text;
+    List<Element> container =
+        document!.getElementsByClassName("mntl-recipe-details__value");
+    if (container.isNotEmpty) {
+      return container.last.text;
+    }
   }
 }

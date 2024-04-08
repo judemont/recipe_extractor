@@ -10,3 +10,7 @@
 - Improved structure
 ## 2.0.1
 - Fixed bbcgoodfood.com
+## 2.1.0
+- Added servings
+## 2.1.1
+- Bug fix
