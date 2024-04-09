@@ -7,6 +7,8 @@ void main() async {
   RecipeData recipeData = await extractRecipe(recipeUrl);
 
   print(recipeData.name);
-  print(recipeData.ingredients);
-  print(recipeData.instructions);
+  print(recipeData.image);
+  print(recipeData.servings);
+  print(recipeData.ingredients?.join("\n"));
+  print(recipeData.instructions?.join("\n"));
 }

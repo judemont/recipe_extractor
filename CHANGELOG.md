@@ -14,3 +14,7 @@
 - Added servings
 ## 2.1.1
 - Bug fix
+## 2.2.0
+- Can now extract recipe image
+## 2.2.1
+- Readme update

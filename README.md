@@ -14,18 +14,7 @@ and the Flutter guide for
 Retrieve recipe information from the url of a cooking website.
 
 ## Getting started
-With dart : 
-```bash
-dart pub get recipe_extractor
-```
-With Flutter : 
-```bash
-flutter pub get recipe_extractor
-```
-Import package :
-```dart
-import package:recipe_extractor/recipe_extractor.dart
-```
+[https://pub.dev/packages/recipe_extractor/install](https://pub.dev/packages/recipe_extractor/install)
 ## Usage
 If an element cannot be extracted, its value will be `null`
 RecipeData :
@@ -45,8 +34,8 @@ RecipeData recipeData = await extractRecipe(recipeUrl);
 print(recipeData.name);
 print(recipeData.image);
 print(recipeData.servings);
-print(recipeData.ingredients).join("\n");
-print(recipeData.instructions).join("\n");
+print(recipeData.ingredients?.join("\n"));
+print(recipeData.instructions?.join("\n"));
 ```
 
 
