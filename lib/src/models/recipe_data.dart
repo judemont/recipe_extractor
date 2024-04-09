@@ -4,6 +4,7 @@ class RecipeData {
   List<String>? instructions;
   String? servings;
   String? image;
+  String? source;
 
   RecipeData({
     this.name,
@@ -11,6 +12,7 @@ class RecipeData {
     this.servings,
     this.ingredients,
     this.instructions,
+    this.source,
   });
 
   Map<String, Object?> toMap() {
@@ -20,6 +22,7 @@ class RecipeData {
       'servings': servings,
       'ingredients': ingredients,
       'instructions': instructions,
+      'source': source,
     };
   }
 

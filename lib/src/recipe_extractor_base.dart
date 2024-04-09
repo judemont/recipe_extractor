@@ -31,7 +31,8 @@ Future<RecipeData> extractRecipe(String address) async {
           image: scarper.image(),
           servings: scarper.servings(),
           ingredients: scarper.ingredients(),
-          instructions: scarper.instructions());
+          instructions: scarper.instructions(),
+          source: address);
     }
   }
 
