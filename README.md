@@ -23,8 +23,9 @@ RecipeData :
 | name        | String?           | Recipe name                                                       |
 | image       | String?           | Presentation image link                                           |
 | servings    | String?           | Number of servings (Example: For 3 people, For 10 muffins etc...) |
-| ingredients | List < String > ? | Ingredient list                                                   |
-| instuctions | List < String > ? | List of preparation instructions                                  |
+| ingredients | List <String>     | Ingredient list                                                   |
+| instuctions | List <String>?    | List of preparation instructions                                  |
+| source      | String?           | Recipe source url                                                 |
 
 ```dart
 const String recipeUrl = "https://www.allrecipes.com/recipe/218792/ggs-chocolate-sheet-cake";
@@ -36,6 +37,7 @@ print(recipeData.image);
 print(recipeData.servings);
 print(recipeData.ingredients?.join("\n"));
 print(recipeData.instructions?.join("\n"));
+print(recipeData.source);
 ```
 
 

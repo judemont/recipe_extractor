@@ -11,4 +11,5 @@ void main() async {
   print(recipeData.servings);
   print(recipeData.ingredients?.join("\n"));
   print(recipeData.instructions?.join("\n"));
+  print(recipeData.source);
 }
