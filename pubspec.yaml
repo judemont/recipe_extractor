@@ -1,5 +1,5 @@
 name: recipe_extractor
-description: Retrieve recipe name, ingredients and instructions from a recipe URL.
+description: Retrieve recipe information from the url of a cooking website 
 version: 2.2.0
 repository: https://github.com/judemont/recipe_extractor
 
