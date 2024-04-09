@@ -52,10 +52,11 @@ class Simplyrecipes implements Scarper {
   String? servings() {
     Element? container =
         document!.querySelector(".project-meta__recipe-serving");
-    if (container != null) {
-      if (container.children.isNotEmpty) {
-        return container.children.last.text;
-      }
-    }
+    return container?.children.lastOrNull?.text;
+  }
+
+  @override
+  String? image() {
+    return document!.querySelector(".primary-image__image")?.attributes["src"];
   }
 }

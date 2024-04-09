@@ -5,6 +5,7 @@ abstract class Scarper {
   List<String>? ingredients();
   List<String>? instructions();
   String? servings();
+  String? image();
   String get host;
   set pageDocument(Document document);
 }

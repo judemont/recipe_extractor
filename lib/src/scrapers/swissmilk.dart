@@ -51,10 +51,15 @@ class Swissmilk implements Scarper {
   @override
   String? servings() {
     Element? container = document!.getElementById("IngredientsCalculatorText");
-    if (container == null) {
-      return null;
-    } else {
-      return container.text;
-    }
+    return container?.text;
+  }
+
+  @override
+  String? image() {
+    List<String>? image = document!
+        .querySelector(".DetailPageHeader--imgWrapper .Image")
+        ?.attributes["srcset"]
+        ?.split(" ");
+    return image?[image.length - 2];
   }
 }

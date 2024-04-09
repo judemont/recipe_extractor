@@ -56,5 +56,13 @@ class Bbcgoodfood implements Scarper {
     if (container.length >= 3) {
       return container[2].text;
     }
+    return null;
+  }
+
+  @override
+  String? image() {
+    return document!
+        .querySelector(".post-header__image-container .image__img")
+        ?.attributes["src"];
   }
 }

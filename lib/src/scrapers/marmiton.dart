@@ -54,4 +54,11 @@ class Marmiton implements Scarper {
         .querySelector(".recipe-ingredients__qt-counter__value_container")
         ?.text;
   }
+
+  @override
+  String? image() {
+    return document!
+        .getElementById("recipe-media-viewer-main-picture")
+        ?.attributes["data-src"];
+  }
 }

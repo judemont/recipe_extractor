@@ -3,11 +3,20 @@ class RecipeData {
   List<String>? ingredients;
   List<String>? instructions;
   String? servings;
-  RecipeData({this.name, this.servings, this.ingredients, this.instructions});
+  String? image;
+
+  RecipeData({
+    this.name,
+    this.image,
+    this.servings,
+    this.ingredients,
+    this.instructions,
+  });
 
   Map<String, Object?> toMap() {
     return {
       'name': name,
+      "image": image,
       'servings': servings,
       'ingredients': ingredients,
       'instructions': instructions,

@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   extractRecipe(
-          "https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM200910_59/tomatenrisotto/?collection=97335&index=0")
+          "https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM200703_10/cordon-bleu/?collection=97335&index=4")
       .then((value) {
     print(value.toMap());
   });

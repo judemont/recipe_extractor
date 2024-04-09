@@ -35,9 +35,10 @@ const String recipeUrl = "https://www.allrecipes.com/recipe/218792/ggs-chocolate
 RecipeData recipeData = await extractRecipe(recipeUrl);
 
 print(recipeData.name);
+print(recipeData.image);
 print(recipeData.servings);
-print(recipeData.ingredients);
-print(recipeData.instructions);
+print(recipeData.ingredients).join("\n");
+print(recipeData.instructions).join("\n");
 ```
 
 ## Additional information

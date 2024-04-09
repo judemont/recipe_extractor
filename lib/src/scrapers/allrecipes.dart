@@ -51,8 +51,13 @@ class Allrecipes implements Scarper {
   String? servings() {
     List<Element> container =
         document!.getElementsByClassName("mntl-recipe-details__value");
-    if (container.isNotEmpty) {
-      return container.last.text;
-    }
+    return container.lastOrNull?.text;
+  }
+
+  @override
+  String? image() {
+    return document!
+        .querySelector(".universal-image__image")
+        ?.attributes["data-src"];
   }
 }
