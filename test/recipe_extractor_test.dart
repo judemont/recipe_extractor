@@ -2,8 +2,7 @@ import 'package:recipe_extractor/recipe_extractor.dart';
 import 'package:test/test.dart';
 
 void main() {
-  extractRecipe(
-          "https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM200703_10/cordon-bleu/?collection=97335&index=4")
+  extractRecipe("https://www.recipetineats.com/chicken-kale-salad/")
       .then((value) {
     print(value.toMap());
   });
