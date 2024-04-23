@@ -53,3 +53,7 @@
 ## 2.4.0
 
 - Added support for `recipetineats.com`
+
+## 2.5.0
+
+- Added support for `topsecretrecipes.com`

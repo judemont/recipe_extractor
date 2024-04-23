@@ -2,7 +2,8 @@ import 'package:recipe_extractor/recipe_extractor.dart';
 import 'package:test/test.dart';
 
 void main() {
-  extractRecipe("https://www.recipetineats.com/chicken-kale-salad/")
+  extractRecipe(
+          "https://www.topsecretrecipes.com/mimis-cafe-five-way-grilled-cheese-copycat-recipe.html")
       .then((value) {
     print(value.toMap());
   });

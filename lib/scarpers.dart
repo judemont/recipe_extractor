@@ -5,6 +5,7 @@ import 'package:recipe_extractor/src/scrapers/marmiton.dart';
 import 'package:recipe_extractor/src/scrapers/recipetineats.dart';
 import 'package:recipe_extractor/src/scrapers/simplyrecipes.dart';
 import 'package:recipe_extractor/src/scrapers/swissmilk.dart';
+import 'package:recipe_extractor/src/scrapers/topsecretrecipes.dart';
 
 List<Scarper> scarpers = [
   Allrecipes(),
@@ -13,4 +14,5 @@ List<Scarper> scarpers = [
   Simplyrecipes(),
   Swissmilk(),
   Recipetineats(),
+  Topsecretrecipes(),
 ];
