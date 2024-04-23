@@ -57,3 +57,7 @@
 ## 2.5.0
 
 - Added support for `topsecretrecipes.com`
+
+## 2.5.1
+
+- Fixed hostnames

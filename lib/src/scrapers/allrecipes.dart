@@ -40,7 +40,7 @@ class Allrecipes implements Scarper {
   }
 
   @override
-  String get host => "www.allrecipes.com";
+  String get host => "allrecipes.com";
 
   @override
   set pageDocument(Document document) {

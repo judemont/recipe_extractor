@@ -41,7 +41,7 @@ class Marmiton implements Scarper {
   }
 
   @override
-  String get host => "www.marmiton.org";
+  String get host => "marmiton.org";
 
   @override
   set pageDocument(Document document) {

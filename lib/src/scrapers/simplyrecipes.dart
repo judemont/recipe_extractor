@@ -41,7 +41,7 @@ class Simplyrecipes implements Scarper {
   }
 
   @override
-  String get host => "www.simplyrecipes.com";
+  String get host => "simplyrecipes.com";
 
   @override
   set pageDocument(Document document) {

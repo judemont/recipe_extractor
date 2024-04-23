@@ -9,7 +9,7 @@ Future<RecipeData> extractRecipe(String address) async {
   if (url == null) {
     throw Exception("Invalid recipe URL");
   }
-  String domain = url.host;
+  String domain = url.host.replaceFirst(RegExp(r'^[^.]*\.(?=\w+\.\w+$)'), "");
   http.Response response;
   try {
     response = await http.Client().get(url, headers: {
@@ -25,7 +25,7 @@ Future<RecipeData> extractRecipe(String address) async {
   for (var scarper in scarpers) {
     if (scarper.host == domain) {
       scarper.pageDocument = document;
-      print("AABBAA");
+
       return RecipeData(
           name: scarper.recipeName(),
           image: scarper.image(),

@@ -40,7 +40,7 @@ class Topsecretrecipes implements Scarper {
   }
 
   @override
-  String get host => "www.topsecretrecipes.com";
+  String get host => "topsecretrecipes.com";
 
   @override
   set pageDocument(Document document) {

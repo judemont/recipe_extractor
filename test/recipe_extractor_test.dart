@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   extractRecipe(
-          "https://www.topsecretrecipes.com/mimis-cafe-five-way-grilled-cheese-copycat-recipe.html")
+          "https://www.topsecretrecipes.com/jack-links-original-beef-jerky-copycat-recipe.html")
       .then((value) {
     print(value.toMap());
   });

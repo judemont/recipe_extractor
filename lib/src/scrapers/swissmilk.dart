@@ -41,7 +41,7 @@ class Swissmilk implements Scarper {
   }
 
   @override
-  String get host => "www.swissmilk.ch";
+  String get host => "swissmilk.ch";
 
   @override
   set pageDocument(Document document) {

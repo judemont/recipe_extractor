@@ -38,7 +38,7 @@ class Recipetineats implements Scarper {
   }
 
   @override
-  String get host => "www.recipetineats.com";
+  String get host => "recipetineats.com";
 
   @override
   set pageDocument(Document document) {

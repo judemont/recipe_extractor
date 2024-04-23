@@ -41,7 +41,7 @@ class Bbcgoodfood implements Scarper {
   }
 
   @override
-  String get host => "www.bbcgoodfood.com";
+  String get host => "bbcgoodfood.com";
 
   @override
   set pageDocument(Document document) {
