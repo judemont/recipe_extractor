@@ -65,3 +65,6 @@
 ## 2.6.0
 
 - Added support for `giallozafferano.it`
+
+## 2.7.0 
+- Added support for `cucchiaio.it`
