@@ -1,6 +1,7 @@
 import 'package:recipe_extractor/src/models/scarper.dart';
 import 'package:recipe_extractor/src/scrapers/allrecipes.dart';
 import 'package:recipe_extractor/src/scrapers/bbcgoodfood.dart';
+import 'package:recipe_extractor/src/scrapers/giallozafferano.dart';
 import 'package:recipe_extractor/src/scrapers/marmiton.dart';
 import 'package:recipe_extractor/src/scrapers/recipetineats.dart';
 import 'package:recipe_extractor/src/scrapers/simplyrecipes.dart';
@@ -15,4 +16,5 @@ List<Scarper> scarpers = [
   Swissmilk(),
   Recipetineats(),
   Topsecretrecipes(),
+  Giallozafferano()
 ];
