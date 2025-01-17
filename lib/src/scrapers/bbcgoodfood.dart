@@ -16,7 +16,7 @@ class Bbcgoodfood implements Scarper {
   @override
   List<String>? ingredients() {
     List<Element> ingredientsElList =
-        document!.querySelectorAll(".recipe__ingredients li");
+        document!.querySelectorAll(".ingredients-list__item");
 
     List<String> ingredients = [];
 
@@ -30,11 +30,12 @@ class Bbcgoodfood implements Scarper {
   @override
   List<String>? instructions() {
     List<Node> instructionsElList =
-        document!.querySelectorAll(".recipe__method-steps p");
+        document!.querySelectorAll(".method-steps__list-item");
     List<String> instructions = [];
 
     for (var instructionEl in instructionsElList) {
-      instructions.add(instructionEl.text!.trim());
+      var instructionContent = instructionEl.children[1];
+      instructions.add(instructionContent.text.trim());
     }
 
     return instructions;

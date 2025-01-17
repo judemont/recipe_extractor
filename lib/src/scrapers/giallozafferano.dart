@@ -61,6 +61,7 @@ class Giallozafferano implements Scarper {
 
   @override
   String? image() {
-    return document!.querySelector(".photo")?.attributes["src"];
+    var imageDiv = document!.querySelector(".gz-featured-image");
+    return imageDiv?.children.first.attributes["src"];
   }
 }
