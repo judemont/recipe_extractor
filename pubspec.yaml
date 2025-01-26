@@ -1,6 +1,6 @@
 name: recipe_extractor
 description: Retrieve recipe information from the url of a cooking website
-version: 2.7.0
+version: 2.8.0
 repository: https://github.com/judemont/recipe_extractor
 
 environment:
