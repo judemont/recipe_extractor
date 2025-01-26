@@ -68,3 +68,6 @@
 
 ## 2.7.0 
 - Added support for `cucchiaio.it`
+
+## 2.8.0
+- Bugs fix
